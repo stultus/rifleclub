@@ -1,113 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rifle Club - Official Membership</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Rifle Club - Official Membership</title>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-title">Rifle Club</h1>
-            <p class="hero-subtitle">Join the elite. Become a legend.</p>
-        </div>
-    </section>
+   <section class="hero-section">
+       <div class="hero-content">
+           <h1 class="hero-title">Rifle Club</h1>
+           <p class="hero-subtitle">Join the elite. Become a legend.</p>
+       </div>
+   </section>
 
-    <section class="join-section">
-        <div class="join-container">
-            <h2 class="join-title">Join The Elite</h2>
-            
-            <div class="trivia-section">
-                <h3>Answer to Join</h3>
-                <p>What is the name of the film project that the film star Shajahan is learning hunting for?</p>
-                <div class="trivia-options">
-                    <div class="trivia-option" onclick="checkTrivia('Vettakaran')">Vettakaran</div>
-                    <div class="trivia-option" onclick="checkTrivia('Vettamrugam')">Vettamrugam</div>
-                    <div class="trivia-option" onclick="checkTrivia('Veruthe')">Veruthe</div>
-                    <div class="trivia-option" onclick="checkTrivia('Veeran')">Veeran</div>
-                </div>
-            </div>
+   <section class="join-section">
+       <div class="join-container">
+           <h2 class="join-title">Join The Elite</h2>
+           
+           <div class="trivia-section">
+               <h3>Answer to Join</h3>
+               <p>What is the name of the film project that the film star Shajahan is learning hunting for?</p>
+               <div class="trivia-options">
+                   <div class="trivia-option" onclick="checkTrivia('Vettakaran')">Vettakaran</div>
+                   <div class="trivia-option" onclick="checkTrivia('Vettamrugam')">Vettamrugam</div>
+                   <div class="trivia-option" onclick="checkTrivia('Veruthe')">Veruthe</div>
+                   <div class="trivia-option" onclick="checkTrivia('Veeran')">Veeran</div>
+               </div>
+           </div>
 
-            <div id="formSection" class="form-section">
-                <input type="text" id="memberName" placeholder="Enter your name" required>
-                <br>
-                <button onclick="generateCertificate()">Generate Certificate</button>
-            </div>
+           <div id="formSection" class="form-section">
+               <input type="text" id="memberName" placeholder="Enter your name" required>
+               <br>
+               <button onclick="generateCertificate()">Generate Certificate</button>
+           </div>
 
-            <div id="certificateContainer" class="certificate-container">
-                <div class="certificate" id="certificate">
-                    <div class="watermark">RIFLE CLUB</div>
-                    <div class="movie-release">In Theaters Now</div>
-                    <div class="logo">
-                        <img src="logo.png" alt="Rifle Club Logo">
-                    </div>
-                    <div class="certificate-title">Official Membership Certificate</div>
-                    <div class="member-name">
-                        This is to certify that<br>
-                        <span id="nameSpan"></span>
-                    </div>
-                    <div class="details">
-                        is hereby granted lifetime membership of<br>
-                        <strong>The Rifle Club, Sulthan Bathery</strong><br>
-                        Valid until: <span id="validityDate"></span>
-                    </div>
-                    <div class="movie-tagline">
-                        "Where courage meets precision, and justice finds its mark"
-                    </div>
-                    <div class="signature">
-                        Kaduvachalil Avaran<br>
-                        Secretary, The Rifle Club
-                    </div>
-                    <div class="promotional-section">
-                        <div class="movie-info-banner">
-                            <p>Watch the thrilling action unfold in theaters near you!</p>
-                            <p>Directed by Aashiq Abu | Starring Vijayaraghavan, Dileesh Pothan, Anurag Kashyap</p>
-                        </div>
-                        <div class="social-tags">
-                            <span>#RifleClubMovie</span>
-                            <span>#AashiqAbu</span>
-                            <span>#JoinTheElite</span>
-                            <span>#InTheatersNow</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button onclick="downloadCertificate()" id="downloadBtn" style="display: none;">
-                <i class="fas fa-download"></i> Download Certificate
-            </button>
-        </div>
-    </section>
+           <div id="certificateContainer" class="certificate-container">
+               <div class="certificate" id="certificate">
+                   <div class="watermark">RIFLE CLUB</div>
+                   <div class="movie-release">In Theaters Now</div>
+                   <div class="logo">
+                       <img src="logo.png" alt="Rifle Club Logo">
+                   </div>
+                   <div class="certificate-title">Official Membership Certificate</div>
+                   <div class="member-name">
+                       This is to certify that<br>
+                       <span id="nameSpan"></span>
+                   </div>
+                   <div class="details">
+                       is hereby granted lifetime membership of<br>
+                       <strong>The Rifle Club, Sulthan Bathery</strong><br>
+                       Valid until: <span id="validityDate"></span>
+                   </div>
+                   <div class="movie-tagline">
+                       "Where courage meets precision, and justice finds its mark"
+                   </div>
+                   <div class="signature">
+                       Kaduvachalil Avaran<br>
+                       Secretary, The Rifle Club
+                   </div>
+                   <div class="promotional-section">
+                       <div class="movie-info-banner">
+                           <p>Watch the thrilling action unfold in theaters near you!</p>
+                           <p>Directed by Aashiq Abu | Starring Vijayaraghavan, Dileesh Pothan, Anurag Kashyap</p>
+                       </div>
+                       <div class="social-tags">
+                           <span>#RifleClubMovie</span>
+                           <span>#AashiqAbu</span>
+                           <span>#JoinTheElite</span>
+                           <span>#InTheatersNow</span>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <button onclick="downloadCertificate()" id="downloadBtn" style="display: none;">
+               <i class="fas fa-download"></i> Download Certificate
+           </button>
+       </div>
+   </section>
 
-    <div class="container">
-        <div class="movie-info">
-            <h2>About the Movie</h2>
-            <p>A gripping 2024 Malayalam action thriller directed by Aashiq Abu that will keep you on the edge of your seat. When a couple seeks refuge in an elite rifle club after accidentally killing an underworld don's son, the club members must engage in the fight of their lifetime.</p>
-            
-            <div class="cast-grid">
-                <div class="cast-member">
-                    <img src="/api/placeholder/120/120" alt="Cast">
-                    <h3>Vijayaraghavan</h3>
-                </div>
-                <div class="cast-member">
-                    <img src="/api/placeholder/120/120" alt="Cast">
-                    <h3>Dileesh Pothan</h3>
-                </div>
-                <div class="cast-member">
-                    <img src="/api/placeholder/120/120" alt="Cast">
-                    <h3>Anurag Kashyap</h3>
-                </div>
-                <div class="cast-member">
-                    <img src="/api/placeholder/120/120" alt="Cast">
-                    <h3>Vani Viswanath</h3>
-                </div>
-            </div>
-        </div>
-    </div>
+   <section class="container">
+       <div class="movie-info">
+           <h2>About the Movie</h2>
+           <p>A gripping 2024 Malayalam action thriller directed by Aashiq Abu that will keep you on the edge of your seat. When a couple seeks refuge in an elite rifle club after accidentally killing an underworld don's son, the club members must engage in the fight of their lifetime.</p>
+           
+           <div class="cast-grid">
+               <div class="cast-member">
+                   <img src="/api/placeholder/120/120" alt="Cast">
+                   <h3>Vijayaraghavan</h3>
+               </div>
+               <div class="cast-member">
+                   <img src="/api/placeholder/120/120" alt="Cast">
+                   <h3>Dileesh Pothan</h3>
+               </div>
+               <div class="cast-member">
+                   <img src="/api/placeholder/120/120" alt="Cast">
+                   <h3>Anurag Kashyap</h3>
+               </div>
+               <div class="cast-member">
+                   <img src="/api/placeholder/120/120" alt="Cast">
+                   <h3>Vani Viswanath</h3>
+               </div>
+           </div>
+       </div>
+   </section>
 
-    <script src="script.js"></script>
+   <script src="script.js"></script>
 </body>
 </html>
