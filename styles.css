@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: url('poster.jpeg') fixed;
+    background-size: cover;
+    color: white;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.85), rgba(45, 45, 45, 0.85));
+    z-index: -1;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('poster.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 4em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    color: #fff;
+}
+
+.hero-subtitle {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.join-section {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 60px 20px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 2;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.join-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.join-title {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.trivia-section {
+    background: rgba(255, 51, 51, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 51, 51, 0.3);
+}
+
+.trivia-section h3 {
+    color: #ff3333;
+    margin-bottom: 15px;
+}
+
+.trivia-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.trivia-option {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.trivia-option:hover {
+    background: rgba(255, 51, 51, 0.2);
+    transform: translateY(-2px);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.movie-info {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    margin: 40px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.movie-info h2 {
+    color: #ff3333;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+input[type="text"] {
+    padding: 15px 25px;
+    font-size: 18px;
+    width: 400px;
+    margin: 20px 0;
+    border-radius: 30px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 20px rgba(255,51,51,0.3);
+}
+
+button {
+    padding: 15px 40px;
+    font-size: 18px;
+    background: linear-gradient(45deg, #ff3333, #ff6666);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin: 10px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255,51,51,0.3);
+}
+
+.form-section {
+    display: none;
+}
+
+.cast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.cast-member {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.cast-member:hover {
+    transform: translateY(-5px);
+}
+
+.cast-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.certificate-container {
+    display: none;
+    margin: 40px auto;
+    background: white;
+    padding: 40px;
+    width: 800px;
+    position: relative;
+    color: black;
+    border: 20px solid #2a2a2a;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.certificate {
+    border: 5px solid #ff3333;
+    padding: 40px;
+    position: relative;
+    background: linear-gradient(45deg, rgba(255,51,51,0.05), rgba(255,102,102,0.05));
+}
+
+.promotional-section {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid rgba(255, 51, 51, 0.2);
+    text-align: center;
+}
+
+.movie-info-banner {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.movie-info-banner p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.social-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-tags span {
+    background: linear-gradient(45deg, #ff3333, #ff6666);
+    padding: 5px 15px;
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(255, 51, 51, 0.2);
+}
+
+.movie-release {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 14px;
+    color: #ff3333;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    margin: 10px auto;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.certificate-title {
+    font-size: 36px;
+    color: #ff3333;
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.member-name {
+    font-size: 28px;
+    margin: 20px 0;
+    color: #2a2a2a;
+}
+
+.details {
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.movie-tagline {
+    font-style: italic;
+    margin: 20px 0;
+    color: #666;
+}
+
+.signature {
+    margin-top: 40px;
+    font-style: italic;
+}
+
+.watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    font-size: 80px;
+    opacity: 0.05;
+    white-space: nowrap;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5em;
+    }
+    
+    input[type="text"] {
+        width: 90%;
+    }
+
+    .certificate-container {
+        width: 95%;
+        padding: 20px;
+    }
+    
+    .trivia-options {
+        grid-template-columns: 1fr;
+    }
+}
